@@ -1,6 +1,6 @@
 (function() {
   angular.module('edit.controller', ['contacts.service'])
-  .controller('EditController', function(ContactsService) {
-
+  .controller('EditController', function($scope, $state, ContactsService) {
+    $scope.contactData = ContactsService.getContactData();
   });
-})
+})();

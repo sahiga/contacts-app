@@ -9,25 +9,31 @@
   ])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .$state('home', {
+      .state('contacts', {
         url: '/',
         controller: 'ContactsController',
-        templateUrl: '_contacts.html'
+        templateUrl: 'src/contacts/_contacts.html'
       })
-      .$state('individual', {
-        url: '/individual:id',
-        controller: 'IndividualController',
-        templateUrl: '_individual.html'
+      .state('details', {
+        url: '/details&name=:name',
+        controller: 'DetailsController',
+        templateUrl: 'src/details/_details.html',
+        params: {
+          name: null
+        }
       })
-      .$state('edit', {
-        url: '/edit:id',
+      .state('edit', {
+        url: '/edit&name=:name',
         controller: 'EditController',
-        templateUrl: '_edit.html'
+        templateUrl: 'src/edit/_edit.html',
+        params: {
+          name: null
+        }
       })
-      .$state('new', {
+      .state('new', {
         url: '/new',
         controller: 'NewController',
-        templateUrl: '_new.html'
+        templateUrl: 'src/new/_new.html'
       });
 
     $urlRouterProvider.otherwise('/');
