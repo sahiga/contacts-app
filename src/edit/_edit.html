@@ -1,0 +1,27 @@
+<header class="edit-header">
+  <div class="pull-left">
+    <a ui-sref="contacts">Cancel</a>
+    <a ng-click="saveNewContact()"
+       ng-disabled="editContactForm.$pristine">
+      Done
+    </a>
+  </div>
+</header>
+<section class="edit">
+  <form class="edit-form"
+        name="editContactForm">
+    <input type="text"
+           class="edit-form-field"
+           value="contactData.currentContact.firstName" />
+    <input type="text"
+           class="edit-form-field"
+           value="contactData.currentContact.lastName" />
+    <input type="number"
+           class="edit-form-field"
+           value="contactData.currentContact.phone" />
+    <input type="email"
+           class="edit-form-field"
+           value="contactData.currentContact.email" />
+  </form>
+</section>
+   

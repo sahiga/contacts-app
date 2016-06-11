@@ -1,0 +1,35 @@
+<header class="new-contact-header">
+  <ul class="new-contact-header-list">
+    <li class="new-contact-header-list-item">
+      <a ui-sref="contacts">
+        Cancel
+      </a>
+    </li>
+    <li class="new-contact-header-list-item strong">
+      New Contact
+    </li>
+    <li class="new-contact-header-list-item">
+      <a ng-click="saveNewContact()"
+         ng-disabled="newContactForm.$pristine">
+        Done
+      </a>
+    </li>
+  </ul>
+</header>
+<section class="new-contact">
+  <form class="new-contact-form"
+        name="newContactForm">
+    <input type="text"
+           class="new-contact-form-field"
+           placeholder="First name" />
+    <input type="text"
+           class="new-contact-form-field"
+           placeholder="Last name" />
+    <input type="number"
+           class="new-contact-form-field"
+           placeholder="Phone number" />
+    <input type="email"
+           class="new-contact-form-field"
+           placeholder="Email" />
+  </form>
+</section>

@@ -29,6 +29,8 @@
         controller: 'NewController',
         templateUrl: '_new.html'
       });
+
+    $urlRouterProvider.otherwise('/');
   });
 
 })();

@@ -1,5 +1,5 @@
 (function() {
-  angular.module('edit', ['contacts.service'])
+  angular.module('edit.controller', ['contacts.service'])
   .controller('EditController', function(ContactsService) {
 
   });
