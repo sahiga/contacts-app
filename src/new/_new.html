@@ -9,10 +9,11 @@
       New Contact
     </li>
     <li class="new-contact-header-list-item">
-      <a ng-click="saveNewContact()"
-         ng-disabled="newContactForm.$pristine">
-        Done
-      </a>
+      <input type="button"
+             value="Done"
+             ng-click="saveNewContact()"
+             ng-disabled="newContactForm.$invalid" />
+      {{newContactForm.$invalid}}
     </li>
   </ul>
 </header>
@@ -20,16 +21,33 @@
   <form class="new-contact-form"
         name="newContactForm">
     <input type="text"
+           name="firstName"
+           ng-minlength="1"
            class="new-contact-form-field"
+           ng-model="newContact.firstName"
            placeholder="First name" />
+           {{newContactForm.firstName.$valid}}
     <input type="text"
+           name="lastName"
+           ng-minlength="1"
            class="new-contact-form-field"
+           ng-model="newContact.lastName"
            placeholder="Last name" />
-    <input type="phone"
+           {{newContactForm.lastName.$valid}}
+    <input type="tel"
+           name="phone"
+           ng-minlength="10"
+           ng-pattern="telephoneRegexp"
            class="new-contact-form-field"
+           ng-model="newContact.phone"
            placeholder="Phone number" />
+           {{newContactForm.phone.$valid}}
     <input type="email"
+           name="email"
+           ng-minlength="3"
            class="new-contact-form-field"
+           ng-model="newContact.email"
            placeholder="Email" />
+           {{newContactForm.email.$valid}}
   </form>
 </section>

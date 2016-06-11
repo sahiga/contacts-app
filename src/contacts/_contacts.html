@@ -1,21 +1,22 @@
 <header class="contacts-header">
-  <ul class="contacts-header-list">
-    <li class="contacts-header-list-item">
-      Groups
-    </li>
-    <li class="contacts-header-list-item strong">
-      All Contacts
-    </li>
-    <li class="contacts-header-list-item">
-      <span class="fa fa-plus">+</span>
-    </li>
-  </ul>
+  <h1 class="text-center">
+    All Contacts
+  </h1>
+  <a class="fa fa-plus contacts-header-icon"
+     ui-sref="new">
+    +
+  </a>
 </header>
 <section class="all-contacts">
   <ul class="all-contacts-list">
-    <li ng-repeat="contact in allContacts track by contact.id">
+    <li class="all-contacts-list-item"
+        ng-repeat="contact in allContacts | orderBy: 'lastName'">
       <a ng-click="showContactDetails(contact)"
-         ng-bind="contact.name">
+         class="contacts-list-item-link">
+        <span ng-bind="contact.firstName"></span>
+        <span ng-bind="contact.lastName"
+              class="strong">
+        </span>
       </a>
     </li>
   </ul>

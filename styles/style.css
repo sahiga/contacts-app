@@ -1,0 +1,56 @@
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #222;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.contacts-header {
+  background: #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.contacts-header-icon {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+}
+
+.all-contacts {
+  margin: 4em 0 0 0;
+}
+
+.all-contacts-list {
+  list-style: none;
+  margin: 0 0 0 -2em;
+}
+
+.all-contacts-list-item {
+  line-height: 2em;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.contacts-list-item-link {
+  display: block;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  margin: -0.2em -1em;
+}
+
+.contacts-list-item-link:hover {
+  background: #ddd;
+}

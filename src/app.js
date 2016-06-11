@@ -3,6 +3,7 @@
     'ui.router',
     'contacts.controller',
     'contacts.service',
+    'contacts.constants',
     'edit.controller',
     'details.controller',
     'new.controller'
