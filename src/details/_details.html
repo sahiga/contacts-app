@@ -1,0 +1,26 @@
+<header class="details-header">
+  <div class="pull-left">
+    <span class="fa fa-caret-left"></span>
+    <a ui-sref="contacts">All Contacts</a>
+  </div>
+  <div class="pull-right">
+    <a ui-sref="edit">Edit</a>
+  </div>
+</header>
+<section class="details">
+  <h3 ng-bind="contactData.currentContact.name"></h3>
+  <table class="details-table">
+    <tr>
+      <td class="details-cell-wide">
+        <span ng-bind="contactData.currentContact.phone"></span>
+      </td>
+      <td>
+    </tr>
+    <tr>
+      <td class="details-cell-narrow">
+        <span class="fa">*</span>
+        <span class="fa">*</span>
+      </td>
+    </tr>
+  </table>
+</section>

@@ -1,0 +1,22 @@
+<header class="contacts-header">
+  <ul class="contacts-header-list">
+    <li class="contacts-header-list-item">
+      Groups
+    </li>
+    <li class="contacts-header-list-item strong">
+      All Contacts
+    </li>
+    <li class="contacts-header-list-item">
+      <span class="fa fa-plus">+</span>
+    </li>
+  </ul>
+</header>
+<section class="all-contacts">
+  <ul class="all-contacts-list">
+    <li ng-repeat="contact for contacts">
+      <a ng-click="showContactDetails(contact)"
+         ng-bind="contact.name">
+      </a>
+    </li>
+  </ul>
+</section>

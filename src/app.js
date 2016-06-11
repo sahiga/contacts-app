@@ -3,9 +3,9 @@
     'ui.router',
     'contacts.controller',
     'contacts.service',
-    'edit.contact.controller',
-    'individual.contact.controller',
-    'new.contact.controller'
+    'edit.controller',
+    'details.controller',
+    'new.controller'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -16,18 +16,18 @@
       })
       .$state('individual', {
         url: '/individual:id',
-        controller: 'IndividualContactController',
-        templateUrl: '_contact.html'
+        controller: 'IndividualController',
+        templateUrl: '_individual.html'
       })
       .$state('edit', {
         url: '/edit:id',
-        controller: 'EditContactController',
+        controller: 'EditController',
         templateUrl: '_edit.html'
       })
       .$state('new', {
         url: '/new',
-        controller: 'NewContactController',
-        templateUrl: '_new_contact.html'
+        controller: 'NewController',
+        templateUrl: '_new.html'
       });
   });
 
