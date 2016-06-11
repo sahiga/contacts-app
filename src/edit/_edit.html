@@ -1,27 +1,30 @@
 <header class="edit-header">
   <div class="pull-left">
     <a ui-sref="contacts">Cancel</a>
-    <a ng-click="saveNewContact()"
-       ng-disabled="editContactForm.$pristine">
-      Done
-    </a>
+    <input type="button"
+           value="Done"
+           ng-click="updateContact()"
+           ng-disabled="editContactForm.firstName.$pristine && editContactForm.lastName.$pristine && editContactForm.phone.$pristine && editContactForm.email.$pristine" />
   </div>
 </header>
 <section class="edit">
   <form class="edit-form"
         name="editContactForm">
     <input type="text"
+           name="firstNme"
            class="edit-form-field"
-           value="{{contactData.currentContact.firstName}}" />
+           ng-model="contactData.currentContact.firstName" />
     <input type="text"
+           name="lastName"
            class="edit-form-field"
-           value="{{contactData.currentContact.lastName}}" />
+           ng-model="contactData.currentContact.lastName" />
     <input type="phone"
+           name="phone"
            class="edit-form-field"
-           value="{{contactData.currentContact.phone}}" />
+           ng-model="contactData.currentContact.phone" />
     <input type="email"
+           name="email"
            class="edit-form-field"
-           value="{{contactData.currentContact.email}}" />
+           ng-model="contactData.currentContact.email" />
   </form>
 </section>
-   
